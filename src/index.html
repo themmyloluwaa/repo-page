@@ -9,7 +9,10 @@
 </head>
 
 <body>
+
+    <!-- Header Start -->
     <header class="header-container flex-wrap ">
+        <!-- Github Svg icon start -->
         <div class="header-item d-md-show d-none d-md-flex header-link">
             <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
                 width="32" aria-hidden="true">
@@ -18,6 +21,8 @@
                 </path>
             </svg>
         </div>
+        <!-- Github SVG icon end -->
+        <!-- Toggler start -->
         <div class="hambuger-container  d-md-none header-item" id='toggle-menu'>
             <button aria-label="Toggle navigation" aria-expanded="true" type="button" class="button-link">
                 <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24"
@@ -28,6 +33,8 @@
                 </svg>
             </button>
         </div>
+        <!-- Toggler end -->
+        <!-- Navigation items start -->
         <div id='hamburger-items'
             class="header-item f-order-2 d-none d-md-flex flex-auto flex-column w-100 flex-md-row flex-md-order-none mt-4 mt-md-none mr-0 mr-md-4">
             <div class="header-search flex-auto  mb-4 mb-md-none mr-md-4">
@@ -58,6 +65,9 @@
                     Sign out</a>
             </nav>
         </div>
+        <!-- Navigation items end -->
+
+        <!-- Mobile github svg icon start -->
         <div class="header-item d-md-none header-link">
             <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
                 width="32" aria-hidden="true">
@@ -66,6 +76,9 @@
                 </path>
             </svg>
         </div>
+        <!-- Mobile github svg icon end -->
+
+        <!-- notification element start -->
         <div class="header-item  mr-0 mr-md-4">
             <a class="header-link pos-rel">
 
@@ -81,6 +94,7 @@
                 </svg>
             </a>
         </div>
+        <!--notification element end  -->
         <div class="header-item d-none d-md-flex pos-rel">
             <details>
                 <summary class="header-link">
@@ -111,6 +125,8 @@
                 </div>
             </details>
         </div>
+
+        <!-- New Action and Profile dropdown start -->
         <div class="header-item d-none d-md-flex pos-rel">
             <details>
                 <summary class="header-link">
@@ -174,8 +190,14 @@
                 </div>
             </details>
         </div>
+        <!-- New Action and Profile dropdown end -->
     </header>
+
+    <!-- Header End -->
+
+    <!-- Main Body Start -->
     <main id="main-section">
+        <!-- Sticky navigation  start -->
         <section class="sticky-container pos-sticky d-none d-md-block w-100">
             <section class="sticky-section">
                 <div class="d-flex flex-md-row gt-condensed ml-4 mr-4">
@@ -235,12 +257,16 @@
                 </div>
             </section>
         </section>
+        <!-- Sticky navigation  end -->
+
+        <!-- Repo and profile section start -->
         <section class="main-section-2">
             <section class="flex-column flex-md-row d-flex gt-condensed">
                 <section class="col-12 col-md-3 flex-shrink-0 mb-4 mb-md-none px-4">
-                    <div class="profixle-section-container">
+                    <!-- Profile section start -->
+                    <div class="profile-section-container">
                         <div class="d-flex d-md-block profile-section mb-4 mb-md-none">
-                            <div class="pos-rel col-2 col-md-12 mr-4 mr-md-none flex-shrink-0" style="z-index: 4; margin-top: -40px;">
+                            <div class="pos-rel col-2 col-md-12 mr-4 mr-md-none flex-shrink-0" style="z-index: 4;">
                                 <img width="260" height="260" style="height: auto;"
                                     class="avatar v-align-middle w-100 ml-mb-none loading" alt="" />
                                 <div class="d-none d-md-block pos-rel">
@@ -265,9 +291,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Profile section end -->
                 </section>
 
                 <section class="col-12 col-md-9 flex-shrink-0 ">
+                    <!-- mobile sticky nav start -->
                     <section class="mobile-sticky-nav d-md-none d-block pos-sticky" style="z-index: 15;">
                         <nav class=" d-flex " aria-label="Clickable navigation">
                             <a class="sticky-items-child">
@@ -309,7 +337,9 @@
                             </a>
                         </nav>
                     </section>
+                    <!-- mobile sticky nav end -->
                     <section class="pos-rel">
+                        <!-- Repo container start -->
                         <section class="py-4 repo-container">
                             <form class="d-block d-md-flex">
                                 <div class='flex-auto mb-4 mb-md-none mr-md-4'>
@@ -318,8 +348,10 @@
                                 </div>
                             </form>
                         </section>
+                        <!-- Repo container end -->
                         <section id="repo-container-list" class="pl-4">
                             <ul>
+                                <!-- Repo items template -->
                                 <div class="template loading mt-4" style="height: 30vh;"></div>
                                 <div class="template loading mt-4" style="height: 30vh;"></div>
                                 <div class="template loading mt-4" style="height: 30vh;"></div>
@@ -330,9 +362,10 @@
                 </section>
             </section>
         </section>
+        <!-- Repo and profile section end -->
     </main>
 
-
+    <!-- Main Body End -->
     <script src='js/script.js'></script>
 </body>
 
