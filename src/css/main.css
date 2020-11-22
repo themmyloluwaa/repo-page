@@ -777,7 +777,7 @@ padding-bottom: 24px;
 }
   
 
-    
+/*     
     .mt-md-1 {
         margin-top: 2px;
     }
@@ -810,11 +810,11 @@ padding-bottom: 24px;
     
     .mb-md-4 {
         margin-bottom: 16px;
-    }
+    } */
     
  
     
-    .mr-md-1 {
+    /* .mr-md-1 {
         margin-right: 2px;
     }
     
@@ -824,34 +824,34 @@ padding-bottom: 24px;
     
     .mr-md-3 {
         margin-right: 8px;
-    }
+    } */
     
     .mr-md-4 {
         margin-right: 16px;
     }
     
-    .ml-md-0 {
+    /* .ml-md-0 {
         margin-left: 0;
-    }
+    } */
     
-    .ml-md-1 {
+    /* .ml-md-1 {
         margin-left: 2px;
-    }
+    } */
     
-    .ml-md-2 {
+    /* .ml-md-2 {
         margin-left: 4px;
-    }
+    } */
     
-    .ml-md-3 {
+    /* .ml-md-3 {
         margin-left: 8px;
-    }
+    } */
     
-    .ml-md-4 {
+    /* .ml-md-4 {
         margin-left: 16px;
-    }
+    } */
     
   
-    .pt-md-1 {
+    /* .pt-md-1 {
         padding-top: 2px;
     }
     
@@ -865,10 +865,10 @@ padding-bottom: 24px;
     
     .pt-md-4 {
         padding-top: 16px;
-    }
+    } */
     
  
-    .pb-md-1 {
+    /* .pb-md-1 {
         padding-bottom: 2px;
     }
     
@@ -882,10 +882,10 @@ padding-bottom: 24px;
     
     .pb-md-4 {
         padding-bottom: 16px;
-    }
+    } */
     
    
-    .pr-md-1 {
+    /* .pr-md-1 {
         padding-right: 2px;
     }
     
@@ -899,10 +899,10 @@ padding-bottom: 24px;
     
     .pr-md-4 {
         padding-right: 16px;
-    }
+    } */
     
   
-    .pl-md-1 {
+    /* .pl-md-1 {
         padding-left: 2px;
     }
     
@@ -916,9 +916,9 @@ padding-bottom: 24px;
     
     .pl-md-4 {
         padding-left: 16px;
-    }
+    } */
     
-    .py-md-1 {
+    /* .py-md-1 {
         padding-top: 2px;
         padding-bottom: 2px;
     }
@@ -931,9 +931,9 @@ padding-bottom: 24px;
     .py-md-3 {
         padding-top: 8px;
         padding-bottom: 8px;
-    }
+    } */
     
-    .py-md-4 {
+    /* .py-md-4 {
         padding-top: 16px;
         padding-bottom: 16px;
     }
@@ -956,7 +956,7 @@ padding-bottom: 24px;
     .px-md-4 {
         padding-left: 16px;
         padding-right: 16px;
-    }
+    } */
 
     .col-md-3 {
         width: 25%;
