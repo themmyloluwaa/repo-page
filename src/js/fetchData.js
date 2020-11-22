@@ -8,7 +8,7 @@ async function fetchData() {
       method: "post",
       headers: {
         "Content-type": "application/json",
-        Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       },
       body: JSON.stringify({ query: dataQuery }),
     })
