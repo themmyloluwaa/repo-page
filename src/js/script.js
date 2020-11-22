@@ -8,7 +8,9 @@ const hamburger = document.querySelector(".hambuger-container");
 const hamburgerItems = document.querySelector("#hamburger-items");
 const avatarElements = document.querySelectorAll(".avatar");
 const repoCountElement = document.querySelector(".repo-count");
-const loginName = document.querySelectorAll("#loginName");
+const loginUsername = document.querySelectorAll("#loginUsername");
+const loginProfilename = document.querySelector(".profile-name");
+const profileBio = document.querySelector(".profile-bio");
 const templateElements = document.querySelectorAll(".template");
 hamburger.addEventListener("click", () => {
   hamburgerItems.classList.toggle("d-none");
@@ -34,7 +36,12 @@ const fetchData = async () => {
       .then((res) => res.json())
       .then((json) => json)
       .catch((e) => console.log(e));
+
     repoCountElement.innerHTML = data.data.user.repositories.totalCount;
+
+    loginProfilename.innerHTML = data.data.user.name;
+
+    profileBio.innerHTML = data.data.user.bio;
 
     avatarElements.forEach((avatar) => {
       avatar.setAttribute("src", data.data.user.avatarUrl);
@@ -42,10 +49,11 @@ const fetchData = async () => {
       avatar.classList.remove("loading");
     });
 
-    loginName.forEach((username) => {
+    loginUsername.forEach((username) => {
       username.innerHTML = data.data.user.login;
     });
 
+    console.log(data.data.user);
     renderRepositoryTemplate(data.data.user.repositories);
     templateElements.forEach((template) => {
       template.classList.remove("template");

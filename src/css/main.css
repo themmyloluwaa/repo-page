@@ -601,11 +601,17 @@ details>summary:first-of-type {
     line-height: 1;
 }
 
-.profile-name {
+
+.profile-username {
     font-size: 20px;
     font-weight: 200;
     font-style: normal;
     display: block;
+}
+
+.profile-bio {
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 .mobile-sticky-nav {
