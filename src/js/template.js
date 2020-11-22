@@ -61,7 +61,7 @@ ${repo?.description ?? ""}
                     : ""
                 }
                 <span class='v-align-middle'>
-                Updated  on ${formatDate(repo.updatedAt)}
+                Updated ${formatDate(repo.updatedAt)}.
                 </span>
             </section>
 
