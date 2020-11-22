@@ -1,26 +1,21 @@
 import { baseUrl, dataQuery } from "./utils";
 import { renderRepositoryTemplate } from "./template";
+import * as SelectedElements from "./selectedElements";
 
-const header = document.querySelector("header.header-container");
-const details = document.querySelectorAll("details");
-const main = document.querySelector("body");
-const hamburger = document.querySelector(".hambuger-container");
-const hamburgerItems = document.querySelector("#hamburger-items");
-const avatarElements = document.querySelectorAll(".avatar");
-const repoCountElement = document.querySelectorAll(".repo-count");
-const loginUsername = document.querySelectorAll("#loginUsername");
-const loginProfilename = document.querySelector(".profile-name");
-const profileBio = document.querySelector(".profile-bio");
-const templateElements = document.querySelectorAll(".template");
-hamburger.addEventListener("click", () => {
-  hamburgerItems.classList.toggle("d-none");
+
+// handle navigation items display on mobile
+SelectedElements.hamburger.addEventListener("click", () => {
+  SelectedElements.hamburgerItems.classList.toggle("d-none");
 });
 
-header.addEventListener("click", () => {
-  details.forEach((detail) => (detail.open = false));
+// handle details element display 
+SelectedElements.header.addEventListener("click", () => {
+  SelectedElements.details.forEach((detail) => (detail.open = false));
 });
-main.addEventListener("click", () => {
-  details.forEach((detail) => (detail.open = false));
+
+// handle details element display 
+SelectedElements.main.addEventListener("click", () => {
+  SelectedElements.details.forEach((detail) => (detail.open = false));
 });
 
 const fetchData = async () => {
@@ -37,29 +32,27 @@ const fetchData = async () => {
       .then((json) => json)
       .catch((e) => console.log(e));
 
-    repoCountElement.forEach(repoEl => {
-      
-      repoEl.innerHTML = data.data.user.repositories.totalCount
-      repoEl.setAttribute('title', data.data.user.repositories.totalCount)
-    }
-      );
+    SelectedElements.repoCountElement.forEach((repoEl) => {
+      repoEl.innerHTML = data.data.user.repositories.totalCount;
+      repoEl.setAttribute("title", data.data.user.repositories.totalCount);
+    });
 
-    loginProfilename.innerHTML = data.data.user.name;
+    SelectedElements.loginProfilename.innerHTML = data.data.user.name;
 
-    profileBio.innerHTML = data.data.user.bio;
+    SelectedElements.profileBio.innerHTML = data.data.user.bio;
 
-    avatarElements.forEach((avatar) => {
+    SelectedElements.avatarElements.forEach((avatar) => {
       avatar.setAttribute("src", data.data.user.avatarUrl);
       avatar.setAttribute("alt", data.data.user.login);
       avatar.classList.remove("loading");
     });
 
-    loginUsername.forEach((username) => {
+    SelectedElements.loginUsername.forEach((username) => {
       username.innerHTML = data.data.user.login;
     });
 
     renderRepositoryTemplate(data.data.user.repositories);
-    templateElements.forEach((template) => {
+    SelectedElements.templateElements.forEach((template) => {
       template.classList.remove("template");
       template.classList.remove("loading");
       template.classList.add("d-none");

@@ -99,7 +99,7 @@ svg:not(:root) {
 }
 
 .mt-4 {
-    margin-top: 16px;
+    margin-top: 16px !important;
 }
 
 .mb-0 {
@@ -710,6 +710,7 @@ details>summary:first-of-type {
     width: 100%;
     color: transparent;
     padding: 10px 80px;
+    margin-top: 20px;
 }
 
 .loading {
@@ -740,9 +741,7 @@ details>summary:first-of-type {
     .flex-md-auto {
         flex: auto;
     }
-    .mt-25  {
-        margin-top: 0;
-    }
+  
 
     .btn {
         padding: 3px 12px;
