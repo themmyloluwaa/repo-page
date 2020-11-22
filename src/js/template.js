@@ -9,7 +9,6 @@ export const renderRepositoryTemplate = (data) => {
     );
   }
   data.nodes.forEach((repo, i) => {
-    console.log(repo.forkCount);
     const repoItem = `<li class="col-12 d-flex w-100">
         <section class="col-10 col-lg-9 d-inline-block">
             <h2 class="mb-2 repo-link-color">${repo.name} <a></a>

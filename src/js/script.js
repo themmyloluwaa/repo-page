@@ -7,7 +7,7 @@ const main = document.querySelector("body");
 const hamburger = document.querySelector(".hambuger-container");
 const hamburgerItems = document.querySelector("#hamburger-items");
 const avatarElements = document.querySelectorAll(".avatar");
-const repoCountElement = document.querySelector(".repo-count");
+const repoCountElement = document.querySelectorAll(".repo-count");
 const loginUsername = document.querySelectorAll("#loginUsername");
 const loginProfilename = document.querySelector(".profile-name");
 const profileBio = document.querySelector(".profile-bio");
@@ -37,7 +37,12 @@ const fetchData = async () => {
       .then((json) => json)
       .catch((e) => console.log(e));
 
-    repoCountElement.innerHTML = data.data.user.repositories.totalCount;
+    repoCountElement.forEach(repoEl => {
+      
+      repoEl.innerHTML = data.data.user.repositories.totalCount
+      repoEl.setAttribute('title', data.data.user.repositories.totalCount)
+    }
+      );
 
     loginProfilename.innerHTML = data.data.user.name;
 
@@ -53,7 +58,6 @@ const fetchData = async () => {
       username.innerHTML = data.data.user.login;
     });
 
-    console.log(data.data.user);
     renderRepositoryTemplate(data.data.user.repositories);
     templateElements.forEach((template) => {
       template.classList.remove("template");
