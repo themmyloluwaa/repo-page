@@ -689,7 +689,8 @@ details>summary:first-of-type {
     font-size: 12px;
     line-height: 20px;
     cursor: pointer;
-    padding: 3px 7px;
+    min-width: 60px;
+    padding: 3px 5px;
     border-radius: 7px;
     position: relative;
     color: #24292e;

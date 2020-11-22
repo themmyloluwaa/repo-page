@@ -1,20 +1,20 @@
-import {
-  formatDate
-} from "./utils";
+import { formatDate } from "./utils";
 
 export const renderRepositoryTemplate = (data) => {
-  const containerList =  document
-  .querySelector("#repo-container-list>ul");
+  const containerList = document.querySelector("#repo-container-list>ul");
   if (!data || data.nodes.length === 0) {
-    return  containerList.insertAdjacentHTML('beforeend',`<h1 class='ml-4 pl-4 mt-2'> No repository found for this user </h1>`);
+    return containerList.insertAdjacentHTML(
+      "beforeend",
+      `<h1 class='ml-4 pl-4 mt-2'> No repository found for this user </h1>`
+    );
   }
   data.nodes.forEach((repo, i) => {
     const repoItem = `<li class="col-12 d-flex w-100">
         <section class="col-10 col-lg-9 d-inline-block">
-            <h3 class="mb-2 repo-link-color">${repo.name} <a></a>
+            <h2 class="mb-2 repo-link-color">${repo.name} <a></a>
             ${
               repo.isPrivate
-                ? `<span class="mb-2 ml-2 v-align-middle private-label">Private</span></h3>`
+                ? `<span class="mb-2 ml-2 v-align-middle private-label">Private</span></h2>`
                 : ""
             }
             <section>
@@ -73,7 +73,6 @@ ${repo?.description ?? ""}
         </section>
     </li>`;
 
-   
     containerList.insertAdjacentHTML("beforeend", repoItem);
   });
 };
