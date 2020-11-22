@@ -680,6 +680,12 @@ padding-bottom: 24px;
     background-color: #fafbfc;
 }
 
+.loading {
+    background-image: linear-gradient(0deg,#635a5a,#dfdbd2,#e6e6e6,#2c2e27,#f0f5f3,#5d5d5e,#cbd3d4,#d4d7db,#dcdcdd,#a1a1a5,#cfc7c7,#413f3c);
+  background-size: 100% 1100%;
+    animation: loading 10s linear infinite;
+}
+
 @media (min-width:768px) {
     .d-md-flex {
         display: flex;
@@ -1015,3 +1021,9 @@ padding: 0 32px;
         width: 75%;
     }
 }
+
+
+@keyframes loading {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+  }
