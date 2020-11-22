@@ -2,4 +2,4 @@
 
 ### By Temiloluwa Philip Ojo.
 
-[DEMO Link](https://repo-page.vercel.app/)
+[Demo link](https://repo-page.vercel.app/)
