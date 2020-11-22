@@ -32,9 +32,9 @@ async function fetchData() {
 
     // set the image src to the user's photo url
     SelectedElements.avatarElements.forEach((avatar) => {
+      avatar.classList.remove("loading");
       avatar.setAttribute("src", user.avatarUrl);
       avatar.setAttribute("alt", user.login);
-      avatar.classList.remove("loading");
     });
 
     // set the element value to the user's username
