@@ -1,0 +1,23 @@
+{
+  "name": "buycoin-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Temiloluwa Philip Ojo",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "last 5 and_chr versions",
+  "last 5 chrome versions",
+  "last 5 opera versions",
+  "last 5 ios_saf versions",
+  "last 5 safari versions"
+  ]
+}
