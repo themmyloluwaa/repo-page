@@ -1,16 +1,22 @@
-export const baseUrl = "https://api.github.com/graphql";
-
+// format date based on github's specification
 export const formatDate = (date) => {
+  // check that a date string is correctly passed as input
   if (date.length === 0) {
     return `Invalid date input`;
   }
 
+  // convert the received date to js date format
   const repoDate = new Date(date);
+
+  // the date now now
   const currentDate = new Date();
+
+  // difference in the date now and the date received and convert it to days
   const diffOfDays = parseInt(
     (currentDate.getTime() - repoDate.getTime()) / (1000 * 3600 * 24)
   );
 
+  // array of months
   const months = [
     "Jan",
     "Feb",
@@ -26,15 +32,17 @@ export const formatDate = (date) => {
     "Dec",
   ];
 
-  if (diffOfDays > 364) {
+  // if the difference between them is greater than a year
+  if (diffOfDays > 365) {
     return `${repoDate.getDate()} ${
       months[repoDate.getMonth()]
     } ${diffOfDays} days ago.`;
   }
-
+  // else the date difference is less than a year
   return `${repoDate.getDate()} ${months[repoDate.getMonth()]}.`;
 };
 
+// GraphQL query for user's data
 export const dataQuery = `
 query userData {
 user(login: "${process.env.USERNAME}") {

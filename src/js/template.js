@@ -1,5 +1,7 @@
 import { formatDate } from "./utils";
 
+// element that renders the repository lists
+
 export const renderRepositoryTemplate = (data) => {
   const containerList = document.querySelector("#repo-container-list>ul");
   if (!data || data.nodes.length === 0) {
