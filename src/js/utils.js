@@ -32,7 +32,7 @@ export const formatDate = (date) => {
     } ${diffOfDays} days ago.`;
   }
 
-  return `${repoDate.getDate()} ${months[repoDate.getMonth()]}`;
+  return `${repoDate.getDate()} ${months[repoDate.getMonth()]}.`;
 };
 
 export const dataQuery = `

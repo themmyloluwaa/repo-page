@@ -9,6 +9,7 @@ const hamburgerItems = document.querySelector("#hamburger-items");
 const avatarElements = document.querySelectorAll(".avatar");
 const repoCountElement = document.querySelector(".repo-count");
 const loginName = document.querySelectorAll("#loginName");
+const templateElements = document.querySelectorAll(".template");
 hamburger.addEventListener("click", () => {
   hamburgerItems.classList.toggle("d-none");
 });
@@ -31,13 +32,14 @@ const fetchData = async () => {
       body: JSON.stringify({ query: dataQuery }),
     })
       .then((res) => res.json())
-      .then((data) => data)
+      .then((json) => json)
       .catch((e) => console.log(e));
     repoCountElement.innerHTML = data.data.user.repositories.totalCount;
 
     avatarElements.forEach((avatar) => {
       avatar.setAttribute("src", data.data.user.avatarUrl);
       avatar.setAttribute("alt", data.data.user.login);
+      avatar.classList.remove("loading");
     });
 
     loginName.forEach((username) => {
@@ -45,6 +47,11 @@ const fetchData = async () => {
     });
 
     renderRepositoryTemplate(data.data.user.repositories);
+    templateElements.forEach((template) => {
+      template.classList.remove("template");
+      template.classList.remove("loading");
+      template.classList.add("d-none");
+    });
   } catch (e) {
     console.log(e);
   }
