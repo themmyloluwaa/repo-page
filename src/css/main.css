@@ -636,7 +636,7 @@ details>summary:first-of-type {
     margin-top: 20px;
 }
 
-.loading {
+.onload {
     background-image: linear-gradient(0deg, #cadfdf, #c9cfcf, #e6e6e6, #f8f6f6, #bebebe, #9eaaac, #cbd3d4, #a4a6a8, #dcdcdd, #949494, #b5b5b8, #e8ecf1);
     background-size: 100% 1100%;
     animation: loading 3s ease-in-out infinite;

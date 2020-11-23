@@ -42,12 +42,12 @@ export const formatDate = (date) => {
     return `yesterday`;
     // if the difference between them is greater than a year
   } else if (diffOfDays >= 365) {
-    return `${repoDate.getDate()} ${
+    return `on ${repoDate.getDate()} ${
       months[repoDate.getMonth()]
     } ${diffOfDays} days ago`;
   }
   // else the date difference is less than a year but not today.
-  return `${repoDate.getDate()} ${months[repoDate.getMonth()]}`;
+  return `on ${repoDate.getDate()} ${months[repoDate.getMonth()]}`;
 };
 
 // GraphQL query for user's data

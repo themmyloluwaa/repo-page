@@ -32,7 +32,7 @@ async function fetchData() {
 
     // set the image src to the user's photo url
     SelectedElements.avatarElements.forEach((avatar) => {
-      avatar.classList.remove("loading");
+      avatar.classList.remove("onload");
       avatar.setAttribute("src", user.avatarUrl);
       avatar.setAttribute("alt", user.login);
     });
@@ -48,7 +48,7 @@ async function fetchData() {
     // remove template element class and set it to display noe
     SelectedElements.templateElements.forEach((template) => {
       template.classList.remove("template");
-      template.classList.remove("loading");
+      template.classList.remove("onload");
       template.classList.add("d-none");
     });
   } catch (e) {
