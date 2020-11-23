@@ -53,6 +53,10 @@ async function fetchData() {
     });
   } catch (e) {
     console.log(e);
+
+    document.querySelector(
+      "body"
+    ).innerHTML = `<h1 class='ml-4 pt-4'>An error has occured. Please refresh the page. </h1>`;
   }
 }
 

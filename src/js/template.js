@@ -13,10 +13,10 @@ export const renderRepositoryTemplate = (data) => {
   data.nodes.forEach((repo, i) => {
     const repoItem = `<li class="col-12 d-flex w-100">
         <section class="col-10 col-lg-9 d-inline-block">
-            <h2 class="mb-2 repo-link-color">${repo.name} <a></a>
+            <h3 class="mb-2 repo-link-color">${repo.name} <a></a>
             ${
               repo.isPrivate
-                ? `<span class="mb-2 ml-2 v-align-middle private-label">Private</span></h2>`
+                ? `<span class="mb-2 ml-2 v-align-middle private-label">Private</span></h3>`
                 : ""
             }
             <section>
@@ -61,7 +61,7 @@ ${repo?.description ?? ""}
                     : ""
                 }
                 <span class='v-align-middle'>
-                Updated ${formatDate(repo.updatedAt)}.
+                Updated ${formatDate(repo.updatedAt)}
                 </span>
             </section>
 

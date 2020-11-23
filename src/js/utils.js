@@ -11,7 +11,7 @@ export const formatDate = (date) => {
   // the date now now
   const currentDate = new Date();
 
-  // difference in the date now and the date received and convert it to days
+  // find the difference in the date now and the date received and convert it to days
   const diffOfDays = parseInt(
     (currentDate.getTime() - repoDate.getTime()) / (1000 * 3600 * 24)
   );
@@ -32,17 +32,22 @@ export const formatDate = (date) => {
     "Dec",
   ];
 
-  // if the difference between them is greater than a day
-
+  // if the difference between them is less than a day
   if (diffOfDays < 1) {
-    return `today`;
+    // then we are certain the repository was updated some hours ago to the current date.
+
+    // get the hour difference between now and the repository
+    const hourDifference = currentDate.getHours() - repoDate.getHours();
+
+    // if it's less than an hour, return now else return the hours.
+    return hourDifference === 0 ? "now" : `${hourDifference} hour ago`;
   }
   // if the difference between them is eqaul to a day
   else if (diffOfDays === 1) {
     return `yesterday`;
     // if the difference between them is greater than a year
   } else if (diffOfDays >= 365) {
-    return `on ${repoDate.getDate()} ${
+    return `${repoDate.getDate()} ${
       months[repoDate.getMonth()]
     } ${diffOfDays} days ago`;
   }
@@ -71,7 +76,7 @@ user(login: "${process.env.USERNAME}") {
         licenseInfo{
           name
         }
-        languages(first: 1) {
+        languages(first: 1 orderBy:{direction:DESC, field:SIZE}) {
           nodes {
             id
             name
