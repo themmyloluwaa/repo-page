@@ -63,7 +63,7 @@ user(login: "${process.env.USERNAME}") {
     bio
     name
     login
-    repositories(first: 20, orderBy: {direction: DESC, field: CREATED_AT}) {
+    repositories(first: 20, orderBy: {direction: DESC, field: UPDATED_AT}) {
       totalCount
       nodes {
         id
