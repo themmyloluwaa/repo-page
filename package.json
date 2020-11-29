@@ -15,9 +15,9 @@
   },
   "browserslist": [
     "last 5 and_chr versions",
-  "last 5 chrome versions",
-  "last 5 opera versions",
-  "last 5 ios_saf versions",
-  "last 5 safari versions"
+    "last 5 chrome versions",
+    "last 5 opera versions",
+    "last 5 ios_saf versions",
+    "last 5 safari versions"
   ]
 }
